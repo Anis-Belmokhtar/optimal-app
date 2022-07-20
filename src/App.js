@@ -12,6 +12,7 @@ function App() {
       container 
       direction="row" 
       justifyContent="center" 
+      alignItems="center"
       spacing="7"> 
         <Grid item>
           <ChartCard/>
@@ -23,10 +24,16 @@ function App() {
           spacing="7" 
           alignItems="center">
             <Grid item>
-              <Button variant="outlined">Outlined</Button>
+              <Button variant="outlined">Open</Button>
             </Grid>
             <Grid item>
-              <Button variant="outlined">Outlined</Button>
+              <Button variant="outlined">High</Button>
+            </Grid>
+            <Grid item>
+              <Button variant="outlined">Low</Button>
+            </Grid>
+            <Grid item>
+              <Button variant="outlined">Close</Button>
             </Grid>
           </Grid>
         </Grid>

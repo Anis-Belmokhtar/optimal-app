@@ -5,19 +5,30 @@ const Chart = () => {
     GoogleCharts.load(drawChart);
  
     function drawChart() {
+
+        let rawData = [
+            ['Date', 'Open', 'High', 'Low',  'Close'],
+            ['2000-01-03', 122.25, 124.0, 116.1, 116.5],
+            ['2000-01-04', 116.25, 120.5, 115.75, 116.25],
+            ['2000-01-05', 115, 121.0, 115.0, 118.6],
+            ['2000-01-06', 119, 121.4, 116.5, 116.85]
+          ]
  
-    const data = GoogleCharts.api.visualization.arrayToDataTable([
-        ['Chart thing', 'Chart amount'],
-        ['Lorem ipsum', 60],
-        ['Dolor sit', 22],
-        ['Sit amet', 18]
-    ]);
-    const pie_1_chart = new GoogleCharts.api.visualization.PieChart(document.getElementById('chart1'));
-    pie_1_chart.draw(data);
+        var data = GoogleCharts.api.visualization.arrayToDataTable(rawData);
+  
+          var options = {
+            title: 'Coffee Prices',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+          };
+  
+          var chart = new GoogleCharts.api.visualization.LineChart(document.getElementById('curve_chart'));
+  
+          chart.draw(data, options);
 }
 
   return (
-      <div id='chart1'/>
+      <div id='curve_chart'/>
   );
 }
 
