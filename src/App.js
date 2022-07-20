@@ -1,12 +1,38 @@
 import './App.css';
-import Chart from './Chart.js';
-import { Card } from '@mui/material';
+import {Grid, Button} from '@mui/material';
+import ChartCard from './components/ChartCard/ChartCard';
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <Card variant="outlined" sx={{ maxWidth: 275 }}><Chart/></Card>
+      <Grid 
+      container 
+      direction="row" 
+      justifyContent="center" 
+      spacing="7"> 
+        <Grid item>
+          <ChartCard/>
+        </Grid>
+        <Grid item>
+          <Grid 
+          container 
+          direction="column" 
+          spacing="7" 
+          alignItems="center">
+            <Grid item>
+              <Button variant="outlined">Outlined</Button>
+            </Grid>
+            <Grid item>
+              <Button variant="outlined">Outlined</Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        
+        
+      </Grid>
     </div>
   );
 }
