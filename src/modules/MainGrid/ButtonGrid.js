@@ -1,4 +1,4 @@
-import {React, useEffect, useState} from 'react';
+import {React} from 'react';
 import {Grid, Button} from '@mui/material';
 import {toggleOpen, toggleClose, toggleHigh, toggleLow} from './MainGridSlice'
 import { useSelector, useDispatch } from 'react-redux'
